@@ -30,6 +30,7 @@
   become: yes
   command: '/bin/mountpoint -q /srv/glusterfs'
   register: glusterfs_checked
+  ignore_errors: yes
 - name: Label xfs filesystem
   become: yes
   shell: "/usr/sbin/xfs_admin -L \"lv_glusterfs\" /dev/vg00/glusterfs_1"

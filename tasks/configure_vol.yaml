@@ -2,6 +2,7 @@
   become: yes
   command: '/usr/sbin/gluster volume status gluster-volume'
   register: gluster_volume_checked
+  ignore_errors: yes
 - name: Create Gluster volume
   become: yes
   shell: "/usr/sbin/gluster volume create gluster-volume nfs:/srv/glusterfs/brick"
