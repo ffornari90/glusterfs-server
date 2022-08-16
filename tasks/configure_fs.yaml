@@ -20,7 +20,7 @@
   community.general.lvol:
     vg: vg00
     lv: glusterfs_1
-    size: 100g
+    size: "{{ volume_size }}"
 - name: Create a xfs filesystem on /dev/vg00/glusterfs_1
   become: yes
   community.general.filesystem:

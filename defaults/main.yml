@@ -1,3 +1,4 @@
 ---
 # defaults file for glusterfs
 device_name: /dev/vdb
+volume_size: 100g
