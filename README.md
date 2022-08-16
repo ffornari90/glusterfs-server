@@ -1,7 +1,7 @@
-Role Name
+Ansible GlusterFS Server
 =========
 
-A brief description of the role goes here.
+Ansible role for GlusterFS Server instantiation.
 
 Requirements
 ------------
