@@ -1,7 +1,7 @@
 Ansible GlusterFS Server
 =========
 
-Ansible Role for GlusterFS Server instantiation.
+Ansible role for GlusterFS Server instantiation.
 
 Requirements
 ------------
