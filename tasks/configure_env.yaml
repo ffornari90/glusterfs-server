@@ -1,0 +1,9 @@
+- name: Disabling SELinux state
+  become: yes
+  selinux:
+    state: disabled
+- name: Copy Gluster repo file
+  become: yes
+  copy: src=files/Gluster-9.repo dest=/etc/yum.repos.d
+  notify:
+  - update dnf cache

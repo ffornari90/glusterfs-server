@@ -1,0 +1,5 @@
+---
+# handlers file for glusterfs
+- name: update dnf cache
+  ansible.builtin.dnf:
+    update_cache: yes
