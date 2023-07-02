@@ -1,9 +1,10 @@
-- name: Enable and start glusterfsd
-  become: yes
-  service:
-    name: glusterfsd
-    enabled: yes
-    state: started
+#- name: Enable and start glusterfsd
+#  become: yes
+#  service:
+#    name: glusterfs-server
+#    enabled: yes
+#    state: started
+
 - name: Enable and start glusterd
   become: yes
   service:

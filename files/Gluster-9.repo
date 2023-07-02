@@ -1,5 +1,0 @@
-[gluster9]
-name=Gluster 9
-baseurl=https://dl.rockylinux.org/vault/centos/8.5.2111/storage/x86_64/gluster-9/
-gpgcheck=0
-enabled=1

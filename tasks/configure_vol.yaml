@@ -3,18 +3,23 @@
   command: '/usr/sbin/gluster volume status gluster-volume'
   register: gluster_volume_checked
   ignore_errors: yes
+
 - name: Create Gluster volume
   become: yes
-  shell: "/usr/sbin/gluster volume create gluster-volume nfs:/srv/glusterfs/brick"
+  shell: "/usr/sbin/gluster volume create gluster-volume vnode-0:/srv/glusterfs/brick force"
+
   when: "gluster_volume_checked.rc != 0"
+
 - name: Start Gluster volume
   become: yes
   shell: "/usr/sbin/gluster volume start gluster-volume"
   when: "gluster_volume_checked.rc != 0"
+
 - name: Set Performance Direct mode for Gluster volume
   become: yes
   shell: "/usr/sbin/gluster volume set gluster-volume performance.strict-o-direct on"
   when: "gluster_volume_checked.rc != 0"
+
 - name: Set Network Direct IO mode for Gluster volume
   become: yes
   shell: "/usr/sbin/gluster volume set gluster-volume network.remote-dio enable"

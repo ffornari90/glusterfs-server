@@ -1,6 +1,5 @@
 - name: Install Gluster server packages
   become: yes
-  ansible.builtin.dnf:
-    name: glusterfs, glusterfs-libs, glusterfs-server
-    state: latest
-    update_cache: true
+  apt:
+    name: glusterfs-server
+    state: present
