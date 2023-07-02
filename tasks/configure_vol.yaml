@@ -6,8 +6,7 @@
 
 - name: Create Gluster volume
   become: yes
-  shell: "/usr/sbin/gluster volume create gluster-volume vnode-0:/srv/glusterfs/brick force"
-
+  shell: "/usr/sbin/gluster volume create gluster-volume vnode-0:/data/brick force"
   when: "gluster_volume_checked.rc != 0"
 
 - name: Start Gluster volume

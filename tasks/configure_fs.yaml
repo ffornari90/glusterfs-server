@@ -1,8 +1,8 @@
-- name: Create Gluster volume mountpoint
-  become: yes
-  file:
-    path: /srv/glusterfs
-    state: directory
+#- name: Create Gluster volume mountpoint
+#  become: yes
+#  file:
+#    path: /srv/glusterfs
+#    state: directory
 
 #- name: Create a primary partition on "{{ device_name }}"
 #  become: yes
@@ -53,5 +53,5 @@
 - name: Create Gluster volume brick
   become: yes
   file:
-    path: /srv/glusterfs/brick
+    path: /data/brick
     state: directory
